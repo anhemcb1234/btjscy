@@ -6,7 +6,7 @@ async function _hanlderApi() {
         const data = await res.json()
         const content = document.querySelector(".box")
         let inputValue = input.value;
-        let test = await data.articles.filter(x => x.title.includes(inputValue))
+        let test = await data.articles.filter(x => x.title.toLocaleLowerCase().includes(inputValue.toLocaleLowerCase()))
         await clear(content);
         for (let i = 0; i < test.length; i++) {
             contentNode = document.createElement("div")
@@ -22,6 +22,6 @@ async function _hanlderApi() {
 }
 const clear = (content) => {
     while (content.hasChildNodes()) {
-                content.removeChild(content.firstChild)
-            }
+        content.removeChild(content.firstChild)
+    }
 }

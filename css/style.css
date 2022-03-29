@@ -24,6 +24,15 @@ input, button, textarea, select {
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
+
+button {
+  border: none;
+  transition: all 0.8;
+}
+button:hover {
+  color: #fff;
+  background-image: linear-gradient(to right, rgba(255,255,255,1), rgba(0,0,0,1));
+}
 img {
     width: 100%;
 }

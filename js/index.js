@@ -13,7 +13,6 @@ async function _hanlderApi() {
             contentNode.innerHTML = `<div class="col-6"><a href="${test[i].url}" target="_blank"><img class="rounded" src="${test[i].urlToImage}"/></a></div>
                                     <div class="col-6 ms-3"><h1 class="fs-3 fw-bold">${test[i].title}</h1>
                                     <p class="fs-5">${test[i].description}</p></div>`
-            _clear(content)
                                     content.appendChild(contentNode)
         }
         
@@ -22,6 +21,3 @@ async function _hanlderApi() {
     }
 }
 
-        const _clear = (e) => {
-            console.log(e)
-        }
